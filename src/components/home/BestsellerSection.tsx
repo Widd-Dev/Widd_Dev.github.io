@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
 
 export interface MenuItem {
   id: string;
@@ -109,6 +111,16 @@ const formatPrice = (price: number) => {
 
 export const BestsellerSection = () => {
   const bestsellers = menuItems.filter((item) => item.isPopular).slice(0, 4);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = (item: MenuItem) => {
+    addToCart(item);
+    toast({
+      title: "Ditambahkan ke keranjang",
+      description: `${item.name} berhasil ditambahkan.`,
+    });
+  };
 
   return (
     <section className="py-16 md:py-24">
@@ -160,14 +172,13 @@ export const BestsellerSection = () => {
                   <span className="font-semibold text-primary">
                     {formatPrice(item.price)}
                   </span>
-                  <Button asChild size="sm" variant="secondary">
-                    <a
-                      href={`https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20order%20${encodeURIComponent(item.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Order
-                    </a>
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    onClick={() => handleAddToCart(item)}
+                  >
+                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    Tambah
                   </Button>
                 </div>
               </div>

@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { menuItems, MenuItem } from "@/components/home/BestsellerSection";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
+import { ShoppingCart } from "lucide-react";
 
 const categories = [
   { id: "all", label: "Semua" },
@@ -95,6 +98,17 @@ const MenuPage = () => {
 };
 
 const MenuCard = ({ item }: { item: MenuItem }) => {
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = () => {
+    addToCart(item);
+    toast({
+      title: "Ditambahkan ke keranjang",
+      description: `${item.name} berhasil ditambahkan.`,
+    });
+  };
+
   return (
     <div className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300">
       <div className="aspect-square overflow-hidden relative">
@@ -120,14 +134,9 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
           <span className="font-semibold text-primary text-lg">
             {formatPrice(item.price)}
           </span>
-          <Button asChild size="sm" variant="secondary">
-            <a
-              href={`https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20order%20${encodeURIComponent(item.name)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order
-            </a>
+          <Button size="sm" variant="secondary" onClick={handleAddToCart}>
+            <ShoppingCart className="w-4 h-4 mr-1" />
+            Tambah
           </Button>
         </div>
       </div>

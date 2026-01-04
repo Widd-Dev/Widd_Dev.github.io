@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Coffee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { CartButton } from "@/components/cart/CartButton";
 
 const navLinks = [
   { href: "/", label: "Beranda" },
@@ -45,8 +46,9 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button & Theme Toggle */}
+          {/* CTA Button & Theme Toggle & Cart */}
           <div className="hidden md:flex items-center gap-2">
+            <CartButton />
             <ThemeToggle />
             <Button asChild className="gradient-coffee text-primary-foreground">
               <a
@@ -59,8 +61,9 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button & Theme Toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile Menu Button & Cart & Theme Toggle */}
+          <div className="flex items-center gap-1 md:hidden">
+            <CartButton />
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
