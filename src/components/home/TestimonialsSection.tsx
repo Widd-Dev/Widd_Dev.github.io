@@ -1,29 +1,32 @@
 import { Star, Quote } from "lucide-react";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Putri",
+    name: "Siti Nurhaliza",
     role: "Coffee Enthusiast",
     content: "Es Kopi Loka adalah signature drink terbaik yang pernah saya coba! Perpaduan pandan dan coconut-nya unik banget. Jadi langganan setiap minggu.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100",
+    avatar: testimonial1,
   },
   {
     id: 2,
-    name: "Rudi Hartono",
+    name: "Budi Santoso",
     role: "Remote Worker",
     content: "Tempat kerja favorit saya! WiFi kencang, suasana tenang, dan kopinya enak. Barista-nya juga ramah-ramah. Highly recommended!",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+    avatar: testimonial2,
   },
   {
     id: 3,
-    name: "Dinda Amelia",
+    name: "Dewi Lestari",
     role: "Food Blogger",
     content: "Croissant-nya crispy perfect dan banana bread-nya moist banget. Cocok banget dipasangkan dengan cappuccino mereka!",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100",
+    avatar: testimonial3,
   },
 ];
 

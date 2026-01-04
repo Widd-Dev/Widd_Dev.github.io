@@ -64,16 +64,16 @@ export const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
                 <span className="text-sm text-primary-foreground/80">
-                  Jl. Kopi Nikmat No. 123, Jakarta Selatan
+                  Jl. Puter, Rawajarit, Menganti, Kesugihan, Cilacap
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 shrink-0" />
                 <a 
-                  href="tel:+6281234567890" 
+                  href="tel:+6288213407868" 
                   className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  +62 812 3456 7890
+                  +62 882 1340 7868
                 </a>
               </div>
               <div className="flex items-start gap-3">
@@ -93,7 +93,7 @@ export const Footer = () => {
               Dapatkan info promo dan menu terbaru langsung ke WhatsApp Anda.
             </p>
             <a
-              href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20berlangganan%20info%20promo"
+              href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20berlangganan%20info%20promo"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-foreground/90 transition-colors"

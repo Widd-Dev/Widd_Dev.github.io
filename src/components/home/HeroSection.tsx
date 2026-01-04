@@ -46,7 +46,7 @@ export const HeroSection = () => {
             </Button>
             <Button asChild variant="outline" size="lg">
               <a
-                href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20reservasi%20meja"
+                href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20reservasi%20meja"
                 target="_blank"
                 rel="noopener noreferrer"
               >

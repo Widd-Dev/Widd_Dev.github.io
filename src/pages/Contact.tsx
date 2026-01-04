@@ -25,7 +25,7 @@ const ContactPage = () => {
     const waMessage = `Halo Kopi Loka!%0A%0ANama: ${encodeURIComponent(formData.name)}%0AEmail: ${encodeURIComponent(formData.email)}%0ANo. HP: ${encodeURIComponent(formData.phone)}%0A%0APesan:%0A${encodeURIComponent(formData.message)}`;
 
     // Open WhatsApp
-    window.open(`https://wa.me/6281234567890?text=${waMessage}`, "_blank");
+    window.open(`https://wa.me/6288213407868?text=${waMessage}`, "_blank");
 
     toast({
       title: "Pesan dikirim!",
@@ -68,8 +68,8 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Alamat</h3>
                       <p className="text-muted-foreground">
-                        Jl. Kopi Nikmat No. 123<br />
-                        Jakarta Selatan, 12345
+                        Jl. Puter, Rawajarit, Menganti<br />
+                        Kesugihan, Cilacap
                       </p>
                     </div>
                   </div>
@@ -81,10 +81,10 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Telepon</h3>
                       <a
-                        href="tel:+6281234567890"
+                        href="tel:+6288213407868"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +62 812 3456 7890
+                        +62 882 1340 7868
                       </a>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const ContactPage = () => {
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://wa.me/6281234567890"
+                    href="https://wa.me/6288213407868"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -156,7 +156,7 @@ const ContactPage = () => {
               {/* Map */}
               <div className="rounded-xl overflow-hidden h-64 bg-secondary">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.194741899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJakarta!5e0!3m2!1sen!2sid!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31647.51095461!2d109.0892!3d-7.6147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e650f1a3b5a3c7f%3A0x9b2d3b8c5e8e8e8e!2sKesugihan%2C%20Cilacap!5e0!3m2!1sen!2sid!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

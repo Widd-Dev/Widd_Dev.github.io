@@ -50,7 +50,7 @@ export const Navbar = () => {
             <ThemeToggle />
             <Button asChild className="gradient-coffee text-primary-foreground">
               <a
-                href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20reservasi%20meja"
+                href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20reservasi%20meja"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -92,7 +92,7 @@ export const Navbar = () => {
               ))}
               <Button asChild className="gradient-coffee text-primary-foreground mt-2">
                 <a
-                  href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20reservasi%20meja"
+                  href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20reservasi%20meja"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

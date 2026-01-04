@@ -80,7 +80,7 @@ const MenuPage = () => {
             </p>
             <Button asChild size="lg" className="gradient-coffee text-primary-foreground">
               <a
-                href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20pesan"
+                href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20pesan"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -122,7 +122,7 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
           </span>
           <Button asChild size="sm" variant="secondary">
             <a
-              href={`https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20order%20${encodeURIComponent(item.name)}`}
+              href={`https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20order%20${encodeURIComponent(item.name)}`}
               target="_blank"
               rel="noopener noreferrer"
             >

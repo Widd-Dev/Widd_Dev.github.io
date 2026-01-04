@@ -32,7 +32,7 @@ export const CTASection = () => {
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
             >
               <a
-                href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20pesan%20kopi"
+                href="https://wa.me/6288213407868?text=Halo,%20saya%20ingin%20pesan%20kopi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,7 +47,7 @@ export const CTASection = () => {
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
             >
               <a
-                href="https://maps.google.com/?q=Kopi+Loka+Jakarta"
+                href="https://maps.google.com/?q=Kesugihan+Cilacap"
                 target="_blank"
                 rel="noopener noreferrer"
               >
