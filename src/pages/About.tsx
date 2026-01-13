@@ -2,6 +2,9 @@ import { Layout } from "@/components/layout/Layout";
 import { Coffee, Award, Users, Heart } from "lucide-react";
 import cafeInterior from "@/assets/cafe-interior.jpg";
 import counterBar from "@/assets/gallery/counter-bar.jpg";
+import rafandra from "@/assets/team/rafandra.png";
+import imamBaihaqi from "@/assets/team/imam-baihaqi.jpg";
+import azkaRidho from "@/assets/team/azka-ridho.jpg";
 
 const values = [
   {
@@ -23,6 +26,24 @@ const values = [
     icon: Award,
     title: "Konsistensi",
     description: "Standar tinggi yang sama setiap kali Anda berkunjung.",
+  },
+];
+
+const teamMembers = [
+  {
+    name: "Rafandra",
+    role: "Head Barista",
+    image: rafandra,
+  },
+  {
+    name: "Imam Baihaqi",
+    role: "Senior Barista",
+    image: imamBaihaqi,
+  },
+  {
+    name: "Azka Ridho Al Ulya",
+    role: "Barista",
+    image: azkaRidho,
   },
 ];
 
@@ -137,29 +158,15 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                name: "Budi Santoso",
-                role: "Founder & Head Roaster",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
-              },
-              {
-                name: "Maya Putri",
-                role: "Head Barista",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300",
-              },
-              {
-                name: "Andi Wijaya",
-                role: "Operations Manager",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300",
-              },
-            ].map((member) => (
+            {teamMembers.map((member) => (
               <div key={member.name} className="text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
-                />
+                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-primary/20">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
                 <h3 className="font-display text-lg font-semibold text-foreground">
                   {member.name}
                 </h3>
