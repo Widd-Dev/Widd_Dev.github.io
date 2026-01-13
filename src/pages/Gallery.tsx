@@ -10,6 +10,16 @@ import coffeeTable from "@/assets/gallery/coffee-table.jpg";
 import workingTogether from "@/assets/gallery/working-together.jpg";
 import tradingCoffee from "@/assets/gallery/trading-coffee.jpg";
 import codingCoffee from "@/assets/gallery/coding-coffee.jpg";
+import laptopCafe from "@/assets/gallery/laptop-cafe.jpg";
+import codingSetup from "@/assets/gallery/coding-setup.jpg";
+import coffeeBar from "@/assets/gallery/coffee-bar.jpg";
+import interiorModern from "@/assets/gallery/interior-modern.jpg";
+import interiorBlue from "@/assets/gallery/interior-blue.jpg";
+import cafeCounter from "@/assets/gallery/cafe-counter.jpg";
+import pastryDisplay from "@/assets/gallery/pastry-display.jpg";
+import nightVibes from "@/assets/gallery/night-vibes.jpg";
+import studyNotes from "@/assets/gallery/study-notes.jpg";
+import coffeeMoment from "@/assets/gallery/coffee-moment.jpg";
 
 const galleryImages = [
   {
@@ -58,6 +68,66 @@ const galleryImages = [
     id: 8,
     src: codingCoffee,
     alt: "Coding sambil ngopi",
+    category: "moments",
+  },
+  {
+    id: 9,
+    src: laptopCafe,
+    alt: "Diskusi tim dengan laptop di cafe",
+    category: "moments",
+  },
+  {
+    id: 10,
+    src: codingSetup,
+    alt: "Coding dengan teh hangat",
+    category: "moments",
+  },
+  {
+    id: 11,
+    src: coffeeBar,
+    alt: "Bar kopi dengan menu board",
+    category: "interior",
+  },
+  {
+    id: 12,
+    src: interiorModern,
+    alt: "Interior modern dengan dekorasi Jepang",
+    category: "interior",
+  },
+  {
+    id: 13,
+    src: interiorBlue,
+    alt: "Interior dengan sofa biru dan wall art",
+    category: "interior",
+  },
+  {
+    id: 14,
+    src: cafeCounter,
+    alt: "Counter cafe dengan display pastry",
+    category: "interior",
+  },
+  {
+    id: 15,
+    src: pastryDisplay,
+    alt: "Display pastry dan menu minuman",
+    category: "interior",
+  },
+  {
+    id: 16,
+    src: nightVibes,
+    alt: "Suasana malam di cafe",
+    category: "moments",
+  },
+  {
+    id: 17,
+    src: studyNotes,
+    alt: "Belajar trading sambil ngopi",
+    category: "moments",
+  },
+  {
+    id: 18,
+    src: coffeeMoment,
+    alt: "Menikmati es kopi di teras",
     category: "moments",
   },
 ];
