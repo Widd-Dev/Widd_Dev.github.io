@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Coffee, Award, Users, Heart } from "lucide-react";
 import cafeInterior from "@/assets/cafe-interior.jpg";
-import barista from "@/assets/barista.jpg";
+import counterBar from "@/assets/gallery/counter-bar.jpg";
 
 const values = [
   {
@@ -80,8 +80,8 @@ const AboutPage = () => {
             </div>
             <div className="relative">
               <img
-                src={barista}
-                alt="Barista Kopi Loka"
+                src={counterBar}
+                alt="Counter bar Kopi Loka"
                 className="rounded-2xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl">

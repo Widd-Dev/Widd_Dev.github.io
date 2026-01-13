@@ -96,10 +96,10 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
                       <a
-                        href="mailto:hello@kopiloka.id"
+                        href="mailto:widadur.24ep10009@students.unugha.id"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        hello@kopiloka.id
+                        widadur.24ep10009@students.unugha.id
                       </a>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ const ContactPage = () => {
               {/* Social Links */}
               <div>
                 <h3 className="font-semibold text-foreground mb-4">Ikuti Kami</h3>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   <a
                     href="https://instagram.com/kopiloka"
                     target="_blank"
@@ -149,6 +149,13 @@ const ContactPage = () => {
                     aria-label="WhatsApp"
                   >
                     <MessageCircle className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="mailto:widadur.24ep10009@students.unugha.id"
+                    className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-5 h-5" />
                   </a>
                 </div>
               </div>

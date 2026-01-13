@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Coffee, Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
+import { Coffee, Instagram, Facebook, MapPin, Phone, Clock, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -34,6 +34,13 @@ export const Footer = () => {
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:widadur.24ep10009@students.unugha.id"
+                className="hover:text-primary-foreground/80 transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>

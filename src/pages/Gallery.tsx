@@ -2,78 +2,69 @@ import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { X } from "lucide-react";
 
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import barista from "@/assets/barista.jpg";
-import coffeeBeansImg from "@/assets/coffee-beans.jpg";
-import pourOver from "@/assets/gallery/pour-over.jpg";
-import latteArt from "@/assets/gallery/latte-art.jpg";
-import cozyCorner from "@/assets/gallery/cozy-corner.jpg";
-import pastries from "@/assets/gallery/pastries.jpg";
-import espressoMachine from "@/assets/gallery/espresso-machine.jpg";
-import friendsCoffee from "@/assets/gallery/friends-coffee.jpg";
+import counterBar from "@/assets/gallery/counter-bar.jpg";
+import studyCoffee from "@/assets/gallery/study-coffee.jpg";
+import outdoorArea from "@/assets/gallery/outdoor-area.jpg";
+import wallArt from "@/assets/gallery/wall-art.jpg";
+import coffeeTable from "@/assets/gallery/coffee-table.jpg";
+import workingTogether from "@/assets/gallery/working-together.jpg";
+import tradingCoffee from "@/assets/gallery/trading-coffee.jpg";
+import codingCoffee from "@/assets/gallery/coding-coffee.jpg";
 
 const galleryImages = [
   {
     id: 1,
-    src: cafeInterior,
-    alt: "Interior cafe yang nyaman dengan desain modern",
+    src: counterBar,
+    alt: "Bar counter dengan peralatan kopi profesional",
     category: "interior",
   },
   {
     id: 2,
-    src: barista,
-    alt: "Barista membuat latte art",
-    category: "barista",
-  },
-  {
-    id: 3,
-    src: pourOver,
-    alt: "Pour over brewing method",
-    category: "coffee",
-  },
-  {
-    id: 4,
-    src: latteArt,
-    alt: "Latte art rosetta yang indah",
-    category: "coffee",
-  },
-  {
-    id: 5,
-    src: cozyCorner,
-    alt: "Sudut nyaman untuk bekerja",
-    category: "interior",
-  },
-  {
-    id: 6,
-    src: pastries,
-    alt: "Croissant dan pastry segar",
-    category: "food",
-  },
-  {
-    id: 7,
-    src: espressoMachine,
-    alt: "Mesin espresso profesional",
-    category: "coffee",
-  },
-  {
-    id: 8,
-    src: friendsCoffee,
-    alt: "Teman-teman menikmati kopi bersama",
+    src: studyCoffee,
+    alt: "Belajar sambil menikmati kopi",
     category: "moments",
   },
   {
-    id: 9,
-    src: coffeeBeansImg,
-    alt: "Biji kopi segar pilihan",
-    category: "coffee",
+    id: 3,
+    src: outdoorArea,
+    alt: "Area outdoor dengan suasana malam yang cozy",
+    category: "interior",
+  },
+  {
+    id: 4,
+    src: wallArt,
+    alt: "Dekorasi wall art tentang kopi",
+    category: "interior",
+  },
+  {
+    id: 5,
+    src: coffeeTable,
+    alt: "Menikmati kopi bersama teman",
+    category: "moments",
+  },
+  {
+    id: 6,
+    src: workingTogether,
+    alt: "Bekerja bersama di cafe",
+    category: "moments",
+  },
+  {
+    id: 7,
+    src: tradingCoffee,
+    alt: "Trading sambil menikmati kopi",
+    category: "moments",
+  },
+  {
+    id: 8,
+    src: codingCoffee,
+    alt: "Coding sambil ngopi",
+    category: "moments",
   },
 ];
 
 const categories = [
   { id: "all", label: "Semua" },
   { id: "interior", label: "Interior" },
-  { id: "coffee", label: "Kopi" },
-  { id: "food", label: "Makanan" },
   { id: "moments", label: "Momen" },
 ];
 
