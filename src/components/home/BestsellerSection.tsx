@@ -3,12 +3,18 @@ import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
-import latteArt from "@/assets/gallery/latte-art.jpg";
-import pourOver from "@/assets/gallery/pour-over.jpg";
-import pastries from "@/assets/gallery/pastries.jpg";
-import espressoMachine from "@/assets/gallery/espresso-machine.jpg";
-import coffeeMoment from "@/assets/gallery/coffee-moment.jpg";
-import pastryDisplay from "@/assets/gallery/pastry-display.jpg";
+
+// Menu product images
+import espressoImg from "@/assets/menu/espresso.jpg";
+import cappuccinoImg from "@/assets/menu/cappuccino.jpg";
+import caffeLatteImg from "@/assets/menu/caffe-latte.jpg";
+import esKopiSusuImg from "@/assets/menu/es-kopi-susu.jpg";
+import esKopiLokaImg from "@/assets/menu/es-kopi-loka.jpg";
+import coldBrewImg from "@/assets/menu/cold-brew.jpg";
+import matchaLatteImg from "@/assets/menu/matcha-latte.jpg";
+import chocolateHazelnutImg from "@/assets/menu/chocolate-hazelnut.jpg";
+import croissantImg from "@/assets/menu/croissant.jpg";
+import bananaBreadImg from "@/assets/menu/banana-bread.jpg";
 
 export interface MenuItem {
   id: string;
@@ -26,7 +32,7 @@ export const menuItems: MenuItem[] = [
     name: "Espresso",
     description: "Kopi hitam pekat dengan crema yang sempurna",
     price: 22000,
-    image: espressoMachine,
+    image: espressoImg,
     category: "hot-coffee",
     isPopular: true,
   },
@@ -35,7 +41,7 @@ export const menuItems: MenuItem[] = [
     name: "Cappuccino",
     description: "Espresso dengan susu steamed dan foam lembut",
     price: 32000,
-    image: latteArt,
+    image: cappuccinoImg,
     category: "hot-coffee",
     isPopular: true,
   },
@@ -44,7 +50,7 @@ export const menuItems: MenuItem[] = [
     name: "Caffe Latte",
     description: "Espresso dengan susu steamed dan sedikit foam",
     price: 35000,
-    image: pourOver,
+    image: caffeLatteImg,
     category: "hot-coffee",
   },
   {
@@ -52,7 +58,7 @@ export const menuItems: MenuItem[] = [
     name: "Es Kopi Susu",
     description: "Signature drink - espresso, susu segar, gula aren",
     price: 28000,
-    image: coffeeMoment,
+    image: esKopiSusuImg,
     category: "iced-coffee",
     isPopular: true,
   },
@@ -61,7 +67,7 @@ export const menuItems: MenuItem[] = [
     name: "Es Kopi Loka",
     description: "House special dengan sentuhan pandan dan coconut",
     price: 35000,
-    image: coffeeMoment,
+    image: esKopiLokaImg,
     category: "iced-coffee",
     isPopular: true,
   },
@@ -70,7 +76,7 @@ export const menuItems: MenuItem[] = [
     name: "Cold Brew",
     description: "Kopi seduh dingin 18 jam, smooth dan refreshing",
     price: 38000,
-    image: pourOver,
+    image: coldBrewImg,
     category: "iced-coffee",
   },
   {
@@ -78,7 +84,7 @@ export const menuItems: MenuItem[] = [
     name: "Matcha Latte",
     description: "Premium matcha Jepang dengan susu segar",
     price: 35000,
-    image: latteArt,
+    image: matchaLatteImg,
     category: "non-coffee",
   },
   {
@@ -86,7 +92,7 @@ export const menuItems: MenuItem[] = [
     name: "Chocolate Hazelnut",
     description: "Coklat premium dengan hazelnut dan susu",
     price: 38000,
-    image: pourOver,
+    image: chocolateHazelnutImg,
     category: "non-coffee",
   },
   {
@@ -94,7 +100,7 @@ export const menuItems: MenuItem[] = [
     name: "Croissant",
     description: "Croissant butter renyah, freshly baked",
     price: 28000,
-    image: pastryDisplay,
+    image: croissantImg,
     category: "food",
   },
   {
@@ -102,7 +108,7 @@ export const menuItems: MenuItem[] = [
     name: "Banana Bread",
     description: "Kue pisang homemade dengan topping walnut",
     price: 25000,
-    image: pastries,
+    image: bananaBreadImg,
     category: "food",
   },
 ];
