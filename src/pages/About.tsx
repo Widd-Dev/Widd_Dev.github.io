@@ -87,7 +87,7 @@ const AboutPage = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Kopi Loka lahir dari kecintaan kami terhadap kopi Indonesia. 
-                  Dimulai pada tahun 2019 sebagai kedai kopi kecil di sudut Jakarta, 
+                  Dimulai pada tahun 2019 sebagai kedai kopi kecil di Kesugihan, Cilacap, 
                   kami bermimpi untuk mengangkat kopi lokal ke level yang lebih tinggi.
                 </p>
                 <p>

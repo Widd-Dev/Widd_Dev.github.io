@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useCart } from "@/contexts/CartContext";
+import { useOrderHistory } from "@/contexts/OrderHistoryContext";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,24 +18,56 @@ const formatPrice = (price: number) => {
 
 export const CartDrawer = () => {
   const { items, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, clearCart, totalPrice } = useCart();
+  const { addOrder } = useOrderHistory();
   const { toast } = useToast();
+  
+  const [customerName, setCustomerName] = useState("");
+  const [customerPhone, setCustomerPhone] = useState("");
 
   const handleCheckout = () => {
     if (items.length === 0) return;
+
+    if (!customerName.trim()) {
+      toast({
+        title: "Nama harus diisi",
+        description: "Silakan masukkan nama Anda untuk melanjutkan.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!customerPhone.trim()) {
+      toast({
+        title: "No. WhatsApp harus diisi",
+        description: "Silakan masukkan nomor WhatsApp Anda.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Save order to history and get queue number
+    const savedOrder = addOrder({
+      customerName: customerName.trim(),
+      customerPhone: customerPhone.trim(),
+      items: [...items],
+      totalPrice,
+    });
 
     const orderDetails = items
       .map((item) => `- ${item.name} x${item.quantity} (${formatPrice(item.price * item.quantity)})`)
       .join("%0A");
 
-    const message = `Halo Kopi Loka!%0A%0ASaya ingin memesan:%0A${orderDetails}%0A%0ATotal: ${formatPrice(totalPrice)}`;
+    const message = `Halo Kopi Loka!%0A%0A*Data Pemesan:*%0ANama: ${encodeURIComponent(customerName.trim())}%0ANo. WA: ${encodeURIComponent(customerPhone.trim())}%0ANo. Antrian: ${savedOrder.queueNumber}%0A%0A*Pesanan:*%0A${orderDetails}%0A%0A*Total: ${formatPrice(totalPrice)}*`;
 
     window.open(`https://wa.me/6288213407868?text=${message}`, "_blank");
 
     toast({
-      title: "Pesanan dikirim!",
+      title: `Pesanan #${savedOrder.queueNumber} dikirim!`,
       description: "Silakan lanjutkan di WhatsApp untuk konfirmasi.",
     });
 
+    setCustomerName("");
+    setCustomerPhone("");
     clearCart();
     setIsCartOpen(false);
   };
@@ -105,6 +141,27 @@ export const CartDrawer = () => {
             </div>
 
             <div className="border-t border-border pt-4 space-y-4">
+              <div className="space-y-3">
+                <div className="space-y-1.5">
+                  <Label htmlFor="customerName">Nama</Label>
+                  <Input
+                    id="customerName"
+                    placeholder="Masukkan nama Anda"
+                    value={customerName}
+                    onChange={(e) => setCustomerName(e.target.value)}
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="customerPhone">No. WhatsApp</Label>
+                  <Input
+                    id="customerPhone"
+                    placeholder="Contoh: 08123456789"
+                    value={customerPhone}
+                    onChange={(e) => setCustomerPhone(e.target.value)}
+                  />
+                </div>
+              </div>
+
               <div className="flex justify-between items-center text-lg font-semibold">
                 <span>Total</span>
                 <span className="text-primary">{formatPrice(totalPrice)}</span>

@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/gallery", label: "Galeri" },
   { href: "/about", label: "Tentang" },
   { href: "/contact", label: "Kontak" },
+  { href: "/riwayat", label: "Riwayat" },
 ];
 
 export const Navbar = () => {
